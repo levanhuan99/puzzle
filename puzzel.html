@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onclick="chceck()">
+<table>
+
+    <tr>
+        <td id="hinh1" onclick="doihinh1()"><img src="hinh_anh_puzzle_img1_part1.jpg" height="100" width="300" alt="" />
+        </td>
+    </tr>
+    <tr>
+        <td id="hinh2" onclick="doihinh2()"><img src="hinh_anh_puzzle_img1_part2.jpg" height="100" width="300" alt="" />
+        </td>
+    </tr>
+    <tr>
+        <td id="hinh3" onclick="doihinh3()"><img src="hinh_anh_puzzle_img1_part3.jpg" height="100" width="300" alt=""  />
+        </td>
+    </tr>
+    <tr>
+        <td id="hinh4" onclick="doihinh4()"><img src="hinh_anh_puzzle_img1_part4.jpg" height="100" width="300" alt=""  />
+        </td>
+    </tr>
+    <tr>
+        <td id="hinh5" onclick="doihinh5()"><img src="hinh_anh_puzzle_img1_part5.jpg" height="100" width="300" alt="" />
+        </td>
+    </tr>
+
+</table>
+<h2 id="h2">đoán đi bạn</h2>
+
+
+<script>
+    let x;
+    let y;
+    let z;
+    let t;
+    let h;
+    function doihinh1() {
+     let img1='<img src="hinh_anh_puzzle_img1_part1.jpg" height="100" width="300" alt="" />';
+     let img11='<img src="hinh_anh_puzzle_img2_part1.jpg" height="100" width="300" alt="" />';
+     if (x===true){
+         x=false;
+         document.getElementById("hinh1").innerHTML=img11;
+        }else {
+         document.getElementById("hinh1").innerHTML=img1;
+         x=true;
+        }
+     console.log(x);
+    }
+    function doihinh2() {
+        let img2='<img src="hinh_anh_puzzle_img1_part2.jpg" height="100" width="300" alt="" />';
+        let img22='<img src="hinh_anh_puzzle_img2_part2.jpg" height="100" width="300" alt="" />';
+        if (y===true){
+            y=false;
+            document.getElementById("hinh2").innerHTML=img22
+        }else {
+            document.getElementById("hinh2").innerHTML=img2;
+            y=true;
+        }
+        console.log(x);
+    }
+    function doihinh3() {
+        let img3='<img src="hinh_anh_puzzle_img1_part3.jpg" height="100" width="300" alt="" />';
+        let img33='<img src="hinh_anh_puzzle_img2_part3.jpg" height="100" width="300" alt="" />';
+        if (z===true){
+            z=false;
+            document.getElementById("hinh3").innerHTML=img33
+        }else {
+            document.getElementById("hinh3").innerHTML=img3;
+            z=true;
+        }
+        console.log(x);
+    }
+    function doihinh4() {
+        let img4='<img src="hinh_anh_puzzle_img1_part4.jpg" height="100" width="300" alt="" />';
+        let img44='<img src="hinh_anh_puzzle_img2_part4.jpg" height="100" width="300" alt="" />';
+        if (t===true){
+            t=false;
+            document.getElementById("hinh4").innerHTML=img44
+        }else {
+            document.getElementById("hinh4").innerHTML=img4;
+            t=true;
+        }
+        console.log(x);
+    }
+    function doihinh5() {
+        let img5='<img src="hinh_anh_puzzle_img1_part5.jpg" height="100" width="300" alt="" />';
+        let img55='<img src="hinh_anh_puzzle_img2_part5.jpg" height="100" width="300" alt="" />';
+        if (h===true){
+            h=false;
+            document.getElementById("hinh5").innerHTML=img55
+        }else {
+            document.getElementById("hinh5").innerHTML=img5;
+            h=true;
+        }
+        console.log(x);
+    }
+    function chceck() {
+        if (x===true &&y===true&&z===true&&t===true&&h===true){
+            document.getElementById("h2").innerHTML="bạn đoán đúng rồi";
+        }else if(x===false &&y===false&&z===false&&t===false&&h===false) {
+            document.getElementById("h2").innerHTML="bạn đoán đúng rồi";
+        }else {
+            document.getElementById("h2").innerHTML="bạn đoán sai rồi";
+
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
